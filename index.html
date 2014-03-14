@@ -337,7 +337,7 @@ var start = new Date().getTime();
 var end;
 console.log('started on: '+start);
 
-var pid = setInterval(underscore.debounce(push, 2000), 1000);
+var pid = setInterval(_.debounce(push, 2000), 1000);
 setTimeout(clear(pid), 5000);
 
 //round 2
@@ -346,7 +346,7 @@ function round2(){
    start = new Date().getTime();
    console.log('re-started on: '+start+', elapsed: '+(start-end));
 
-   pid = setInterval(underscore.debounce(push, 2000), 1000);
+   pid = setInterval(_.debounce(push, 2000), 1000);
    setTimeout(clear(pid, false), 2000);
 }</pre></div><div class="data hide"><pre>//Underscore's debounced function: fires first true
 
@@ -370,7 +370,7 @@ var start = new Date().getTime();
 var end;
 console.log('started on: '+start);
 
-var pid = setInterval(underscore.debounce(push, 2000, true), 1000);
+var pid = setInterval(_.debounce(push, 2000, true), 1000);
 setTimeout(clear(pid), 5000);
 
 //round 2
@@ -379,7 +379,7 @@ function round2(){
    start = new Date().getTime();
    console.log('re-started on: '+start+', elapsed: '+(start-end));
 
-   pid = setInterval(underscore.debounce(push, 2000, true), 1000);
+   pid = setInterval(_.debounce(push, 2000, true), 1000);
    setTimeout(clear(pid, false), 2000);
 }</pre></div></div>
 </div>
